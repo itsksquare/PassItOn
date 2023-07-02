@@ -25,10 +25,10 @@ const ItemSchema = new Schema({
     type: String,
     required: [true, "Condition is required!"],
   },
-  item_image: {
-    type: String,
-    required: [true, "Image is required!"],
-  },
+  // item_image: {
+  //   type: String,
+  // required: [true, "Image is required!"],
+  // },
   item_address: {
     type: String,
     required: [true, "Address is required!"],
