@@ -2,20 +2,18 @@
 
 import { useState } from "react";
 import { useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
 import { donateimage } from "@public/images";
 import Image from "next/image";
 
 const page = () => {
   const { data: session } = useSession();
-  const router = useRouter();
-  const [submitting, setSubmitting] = useState(false);
   const [donation, setDonation] = useState({
     donation_type: "",
     item_title: "",
     item_category: "",
     item_description: "",
     item_address: "",
+    item_image: "",
   });
 
   const handleChange = (e) => {
@@ -34,21 +32,19 @@ const page = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitting(true);
 
     const res = await fetch("/api/donate", {
       method: "POST",
       body: JSON.stringify(donation),
     });
 
-    setSubmitting(false);
     const data = await res.json();
 
     if (!res.ok) {
       console.log(data);
     } else {
       console.log(data);
-      router.push("/donate");
+      window.location.reload();
     }
   };
 
@@ -94,7 +90,7 @@ const page = () => {
               >
                 <option defaultValue="select">Select</option>
                 <option value="clothes">Clothes</option>
-                <option value="footware">Footware</option>
+                <option value="footwear">Footwear</option>
                 <option value="electronics">Electronics</option>
                 <option value="books">Books</option>
                 <option value="accessories">Accessories</option>
@@ -126,6 +122,23 @@ const page = () => {
                 rows={3}
                 onChange={handleChange}
               />
+            </div>
+            <div className="w-full flex flex-col justify-between items-start py-2">
+              <label className="text-sm text-black p-2">
+                Choose the item condition
+              </label>
+              <select
+                name="item_condition"
+                id="item_condition"
+                className="w-full p-2 rounded-md bg-gray-400"
+                onChange={handleChange}
+              >
+                <option defaultValue="select">Select</option>
+                <option value="Bad">Bad</option>
+                <option value="Fair">Fair</option>
+                <option value="Good">Good</option>
+                <option value="Excellent">Excellent</option>
+              </select>
             </div>
             <div className="w-full flex flex-col justify-between items-start py-2">
               <label className="text-sm text-black p-2">Upload an Image</label>
