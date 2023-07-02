@@ -5,6 +5,20 @@ import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 import { sitelogo } from "@public/images";
 import Image from "next/image";
 import { CityDropdown } from "./CityDropdown";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@components/ui/hover-card";
+import {
+  acc,
+  books,
+  clothes,
+  electronics,
+  footwear,
+  furniture,
+} from "@public/images";
+import Link from "next/link";
 
 const Nav = () => {
   const { data: session } = useSession();
@@ -106,6 +120,53 @@ const Nav = () => {
                 >
                   TakeIn Items
                 </a>
+              </li>
+              <li>
+                <HoverCard>
+                  <HoverCardTrigger className="hover:cursor-pointer">
+                    Categories
+                  </HoverCardTrigger>
+                  <HoverCardContent className="w-full">
+                    <div className="flex justify-between items-center w-full pt-5">
+                      <Link href="/donate">
+                        <div className="flex flex-col justify-between items-center bg-slate-100 rounded-lg p-5 mx-2">
+                          <Image src={clothes} alt="clothes" height={60} />
+                          <p>Clothes</p>
+                        </div>
+                      </Link>
+                      <Link href="/donate">
+                        <div className="flex flex-col justify-between items-center bg-slate-100 rounded-lg p-5 mx-2">
+                          <Image src={footwear} alt="clothes" height={60} />
+                          <p>Footware</p>
+                        </div>
+                      </Link>
+                      <Link href="/donate">
+                        <div className="flex flex-col justify-between items-center bg-slate-100 rounded-lg p-5 mx-2">
+                          <Image src={electronics} alt="clothes" height={60} />
+                          <p>Electronics</p>
+                        </div>
+                      </Link>
+                      <Link href="/donate">
+                        <div className="flex flex-col justify-between items-center bg-slate-100 rounded-lg p-5 mx-2">
+                          <Image src={books} alt="clothes" height={60} />
+                          <p>Books</p>
+                        </div>
+                      </Link>
+                      <Link href="/donate">
+                        <div className="flex flex-col justify-between items-center bg-slate-100 rounded-lg p-5 mx-2">
+                          <Image src={acc} alt="clothes" height={60} />
+                          <p>Accessories</p>
+                        </div>
+                      </Link>
+                      <Link href="/donate">
+                        <div className="flex flex-col justify-between items-center bg-slate-100 rounded-lg p-5 mx-2">
+                          <Image src={furniture} alt="clothes" height={60} />
+                          <p>Furniture</p>
+                        </div>
+                      </Link>
+                    </div>
+                  </HoverCardContent>
+                </HoverCard>
               </li>
               <li>
                 <a
