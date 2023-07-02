@@ -112,10 +112,12 @@ export default function Home() {
 
       <section className="flex flex-col justify-between items-center w-full bg-gray-100">
         <div className="flex flex-col justify-center items-center w-full pt-5">
-          <h2 className="text-3xl font-bold">
-            Donate old/unused Items in 3 simple steps
+          <h2 className="text-3xl font-bold pt-5 text-center">
+            Donate old/unused Items
+            <br />
+            <span className="text-xl font-semibold">in 3 simple steps</span>
           </h2>
-          <p className="text-1xl font-inter w-1/3 text-center">
+          <p className="text-sm font-inter w-1/4 text-center">
             List your old/unused items from the comfort of your home or office
             and at your convenience
           </p>

@@ -1,6 +1,7 @@
 import "@styles/globals.css";
 import Nav from "@components/Nav";
 import Provider from "@components/Provider";
+import Footer from "@components/Footer";
 
 export const metadata = {
   title: "PassItOn",
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
         <Provider>
           <Nav />
           {children}
+          <Footer />
         </Provider>
         <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
       </body>
