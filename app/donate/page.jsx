@@ -12,8 +12,9 @@ const page = () => {
     item_title: "",
     item_category: "",
     item_description: "",
+    item_condition: "",
     item_address: "",
-    item_image: "",
+    // item_image: "",
   });
 
   const handleChange = (e) => {
