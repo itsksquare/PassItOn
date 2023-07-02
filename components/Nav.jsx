@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
+import { sitelogo } from "@public/images";
+import Image from "next/image";
 
 const Nav = () => {
   const { data: session } = useSession();
@@ -22,10 +24,11 @@ const Nav = () => {
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
           <a href="/" className="flex items-center">
-            <img
-              src="https://flowbite.com/docs/images/logo.svg"
-              className="h-8 mr-3"
-              alt="Flowbite Logo"
+            <Image
+              src={sitelogo}
+              height={32}
+              className="h-8 mr-3 rounded-full"
+              alt="PassItOn Logo"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               PassItOn
@@ -102,15 +105,6 @@ const Nav = () => {
               </li>
               <li>
                 <a
-                  href="/categories"
-                  className="text-gray-900 dark:text-white hover:underline"
-                  aria-current="page"
-                >
-                  Categories
-                </a>
-              </li>
-              <li>
-                <a
                   href="/ngo"
                   className="text-gray-900 dark:text-white hover:underline"
                   aria-current="page"
@@ -120,8 +114,8 @@ const Nav = () => {
               </li>
               <li>
                 <a
-                  href="/faq"
-                  className="text-gray-900 dark:text-white hover:underline"
+                  href="#faq"
+                  className="text-gray-900 dark:txext-white hover:underline"
                   aria-current="page"
                 >
                   FAQs
