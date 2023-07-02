@@ -11,6 +11,9 @@ import buybanner from "./buybanner.png";
 import footwear from "./footwear.png";
 import furniture from "./furniture.png";
 import sampleimage from "./sampleimage.jpeg";
+import facebook from "./facebook.png";
+import instagram from "./instagram.png";
+import twitter from "./twitter.png";
 
 export {
   donate,
@@ -26,4 +29,7 @@ export {
   footwear,
   furniture,
   sampleimage,
+  facebook,
+  instagram,
+  twitter,
 };
