@@ -8,6 +8,7 @@ export const POST = async (req) => {
     item_category,
     item_title,
     item_description,
+    item_condition,
     item_address,
   } = await req.json();
 
@@ -20,6 +21,7 @@ export const POST = async (req) => {
       item_category,
       item_title,
       item_description,
+      item_condition,
       item_address,
     });
 
