@@ -14,6 +14,7 @@ import sampleimage from "./sampleimage.jpeg";
 import facebook from "./facebook.png";
 import instagram from "./instagram.png";
 import twitter from "./twitter.png";
+import confirmation from "./confirmation.png";
 
 export {
   donate,
@@ -32,4 +33,5 @@ export {
   facebook,
   instagram,
   twitter,
+  confirmation,
 };
