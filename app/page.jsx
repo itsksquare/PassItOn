@@ -19,7 +19,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div>
-      <section className="flex flex-col justify-between items-end w-full h-full py-5 bg-banner bg-cover bg-no-repeat max-h-max">
+      <section className="flex flex-col justify-between items-end w-full h-full py-5 bg-banner bg-contain bg-no-repeat max-h-max">
         <div className="px-20 py-10">
           <HeroCard />
         </div>
