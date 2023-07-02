@@ -1,13 +1,9 @@
 import { Schema, model, models } from "mongoose";
 
-const ItemSchema = new Schema({
-  donator: {
+const RequestItemSchema = new Schema({
+  requestor: {
     type: Schema.Types.ObjectId,
     ref: "User",
-  },
-  donation_type: {
-    type: String,
-    required: [true, "Type is required!"],
   },
   item_category: {
     type: String,
@@ -21,19 +17,12 @@ const ItemSchema = new Schema({
     type: String,
     required: [true, "Description is required!"],
   },
-  item_condition: {
-    type: String,
-    required: [true, "Condition is required!"],
-  },
-  item_image: {
-    type: String,
-    required: [true, "Image is required!"],
-  },
   item_address: {
     type: String,
     required: [true, "Address is required!"],
   },
 });
 
-const Item = models.Item || model("Item", ItemSchema);
-export default Item;
+const RequestItem =
+  models.RequestItem || model("RequestItem", RequestItemSchema);
+export default RequestItem;
