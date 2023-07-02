@@ -124,6 +124,35 @@ const Nav = () => {
               <li>
                 <HoverCard>
                   <HoverCardTrigger className="hover:cursor-pointer">
+                    Request
+                  </HoverCardTrigger>
+                  <HoverCardContent className="w-full">
+                    <ul className="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm">
+                      <li>
+                        <a
+                          href="/request"
+                          className="text-gray-900 dark:text-white hover:underline"
+                          aria-current="page"
+                        >
+                          Request Item(s)
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/requests"
+                          className="text-gray-900 dark:text-white hover:underline"
+                          aria-current="page"
+                        >
+                          Requests List
+                        </a>
+                      </li>
+                    </ul>
+                  </HoverCardContent>
+                </HoverCard>
+              </li>
+              <li>
+                <HoverCard>
+                  <HoverCardTrigger className="hover:cursor-pointer">
                     Categories
                   </HoverCardTrigger>
                   <HoverCardContent className="w-full">
@@ -169,13 +198,33 @@ const Nav = () => {
                 </HoverCard>
               </li>
               <li>
-                <a
-                  href="/ngo"
-                  className="text-gray-900 dark:text-white hover:underline"
-                  aria-current="page"
-                >
-                  NGOs
-                </a>
+                <HoverCard>
+                  <HoverCardTrigger className="hover:cursor-pointer">
+                    NGOs
+                  </HoverCardTrigger>
+                  <HoverCardContent className="w-full">
+                    <ul className="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm">
+                      <li>
+                        <a
+                          href="/login"
+                          className="text-gray-900 dark:text-white hover:underline"
+                          aria-current="page"
+                        >
+                          NGO Login
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/ngolist"
+                          className="text-gray-900 dark:text-white hover:underline"
+                          aria-current="page"
+                        >
+                          Partnered NGOs
+                        </a>
+                      </li>
+                    </ul>
+                  </HoverCardContent>
+                </HoverCard>
               </li>
               <li>
                 <a
@@ -184,6 +233,15 @@ const Nav = () => {
                   aria-current="page"
                 >
                   FAQs
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/supportus"
+                  className="text-gray-900 dark:txext-white hover:underline"
+                  aria-current="page"
+                >
+                  Support Us
                 </a>
               </li>
             </ul>
