@@ -10,6 +10,7 @@ import electronics from "./electronics.png";
 import buybanner from "./buybanner.png";
 import footwear from "./footwear.png";
 import furniture from "./furniture.png";
+import sampleimage from "./sampleimage.jpeg";
 
 export {
   donate,
@@ -24,4 +25,5 @@ export {
   buybanner,
   footwear,
   furniture,
+  sampleimage,
 };
