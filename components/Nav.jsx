@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 import { sitelogo } from "@public/images";
 import Image from "next/image";
+import { CityDropdown } from "./CityDropdown";
 
 const Nav = () => {
   const { data: session } = useSession();
@@ -34,7 +35,7 @@ const Nav = () => {
               PassItOn
             </span>
           </a>
-          <div className="relative">
+          <div className="relative w-3/5">
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
               <svg
                 className="w-5 h-5 text-gray-500"
@@ -57,6 +58,9 @@ const Nav = () => {
               className="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Search..."
             />
+          </div>
+          <div>
+            <CityDropdown />
           </div>
           <div className="sm:flex hidden">
             {session?.user ? (
@@ -114,7 +118,7 @@ const Nav = () => {
               </li>
               <li>
                 <a
-                  href="#faq"
+                  href="/#faq"
                   className="text-gray-900 dark:txext-white hover:underline"
                   aria-current="page"
                 >
