@@ -52,7 +52,10 @@ const page = ({ params }) => {
         </div>
 
         <div className="w-full">
-          <Link href="/takein" className="black_btn">
+          <Link
+            href={`/takein/${params.id}/confirmation`}
+            className="black_btn"
+          >
             TakeIn
           </Link>
         </div>
